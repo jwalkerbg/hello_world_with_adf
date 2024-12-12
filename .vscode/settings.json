@@ -1,0 +1,9 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.espIdfPathWin": "c:\\esp\\v5.3.2\\esp-idf",
+    "idf.toolsPathWin": "c:\\Espressif\\python_env\\idf5.1_py3.11_env\\Scripts",
+    "idf.openOcdConfigs": [
+        "interface/ftdi/esp32_devkitj_v1.cfg",
+        "target/esp32s3.cfg"
+    ]
+}
