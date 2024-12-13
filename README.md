@@ -7,6 +7,17 @@ Starts a FreeRTOS task to print "Hello World".
 
 (See the README.md file in the upper level 'examples' directory for more information about examples.)
 
+This hello_world example is modified to embed into itself vad example from ESP-ADF.
+
+How it is embedded?
+
+First, be sure that MS VS Code is updated to last version, ESP-IDF extension is updated to last version, ESP-IDF version 5.3.2 framework is installed, ESP-AD version 2.7 is installed.
+
+1. Added line `set(EXTRA_COMPONENT_DIRS $ENV{ADF_PATH}/components)` in the root `CMakeLists.txt` file after `include($ENV{IDF_PATH}/tools/cmake/project.cmake)` and before `project(hello_world)`.
+2. Enаbled `configENABLE_BACKWARD_COMPATIBILITY` in menu config, KERNEL section. Why this: Because ESP-ADF use old style names of FreeRTOS objects.
+3. Added needed header files in `hello_world_main.c`.
+4. Added code from the `main` function of `vad` example.
+
 ## How to use example
 
 Follow detailed instructions provided specifically for this example.
