@@ -9,9 +9,21 @@
 #include "sdkconfig.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/semphr.h"
 #include "esp_chip_info.h"
 #include "esp_flash.h"
 #include "esp_system.h"
+#include "freertos/event_groups.h"
+
+#include "sys/queue.h"
+#include "esp_log.h"
+#include "audio_element.h"
+#include "audio_pipeline.h"
+#include "audio_event_iface.h"
+#include "audio_mem.h"
+#include "audio_mutex.h"
+#include "ringbuf.h"
+#include "audio_error.h"
 
 void app_main(void)
 {
